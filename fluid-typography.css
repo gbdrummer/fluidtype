@@ -1,0 +1,40 @@
+:root {
+  --vp-width_min: 320;
+  --vp-width_max: 2560;
+  
+  --default_font-size_min: 14;
+  --default_font-size_max: 24;
+
+  --font-size_min: var(--default_font-size_min);
+  --font-size_max: var(--default_font-size_max);
+
+  --line-height_min: 1.382;
+  --line-height_max: 1.618;
+
+  --cpl: 62;
+  --char-width: 2.27;
+  --width-factor: calc(100cqi / (var(--font-size_min) * (var(--cpl) / var(--char-width))));
+
+  --scale-ratio: 1.618;
+}
+
+html {
+  font-size: calc(var(--font-size_min) * 1px);
+  line-height: var(--line-height_min);
+}
+
+[fluid] {
+  flex: 1;
+  container-type: inline-size;
+  container-name: fluid;
+
+  font-size: max(calc(var(--font-size_min) * 1px), calc((var(--font-size_min) * 1px) + calc((var(--font-size_max) - var(--font-size_min)) * calc(100cqi - calc(var(--vp-width_min) * 1px)) / calc(var(--vp-width_max) - var(--vp-width_min)))));
+  line-height: max(calc(var(--line-height_min) * 1em), calc(var(--font-size_min) * var(--width-factor)));
+}
+
+@container fluid (min-width: 0px) {
+  * {
+    font-size: max(calc(var(--font-size_min) * 1px), calc((var(--font-size_min) * 1px) + calc((var(--font-size_max) - var(--font-size_min)) * calc(100cqi - calc(var(--vp-width_min) * 1px)) / calc(var(--vp-width_max) - var(--vp-width_min)))));
+    line-height: max(calc(var(--line-height_min) * 1em), calc(var(--font-size_min) * var(--width-factor)));
+  }
+}

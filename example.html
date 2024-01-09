@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Typography Example</title>
+
+  <link rel="stylesheet" href="./fluid-typography.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding-inline: 3.82vw;
+    }
+
+    #demo {
+      display: grid;
+      grid-gap: 3.82vw;
+      grid-template-columns: repeat(auto-fit, minmax(calc((var(--vp-width_min) * 1px) - 7.64vw), 1fr));
+    }
+  </style>
+</head>
+<body>
+  <p fluid style="font-weight: bold; min-width: calc(var(--vp-width_min) * 1px);">
+    Resize the window to see the typography adjust.
+  </p>
+
+  <div id="demo">
+    <section fluid>
+      <h1>Here is an H1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+    </section>
+  
+    <section fluid>
+      <h1>Here is an H1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
+    </section>
+  </div>
+</body>
+</html>
