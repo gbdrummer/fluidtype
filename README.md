@@ -6,7 +6,7 @@ Credit for the math belongs to [Chris Pearson](https://pearsonified.com/about/),
 
 ## Usage
 
-Just include `fluid-typography.css` in the `<head>` of your html document, and add the `fluid` attribute to the DOM elements you would like to exhibit the fluid behavior.
+Just include `fluid-typography.css` in the `<head>` of your html document, and add the `fluid` attribute to the DOM elements you would like to exhibit the fluid behavior. See `example.html` for an example implementation.
 
 ## How it works
 
