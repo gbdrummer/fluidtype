@@ -15,9 +15,6 @@
   --cpl: 62;
   --char-width: 2.27;
   --scale-ratio: 1.618;
-
-  /* DO NOT CHANGE */
-  --width-factor;
 }
 
 html {
@@ -28,7 +25,6 @@ html {
 [fluid] {
   --width-factor: calc(100cqi / (var(--font-size_min) * (var(--cpl) / var(--char-width))));
 
-  flex: 1;
   container-type: inline-size;
   container-name: fluid;
 
