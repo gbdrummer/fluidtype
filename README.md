@@ -28,3 +28,7 @@ These values can be altered by changing the CSS Custom Properties in `fluid-typo
 
 - [MDN Article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries)
 - [The Spec](https://www.w3.org/TR/css-contain-3/#container-queries)
+
+## Coming Soon
+
+- Automatic calculation of `h1 - h6` `font-size` and `line-height` values
