@@ -18,7 +18,7 @@ For the algorithm to work in CSS, the following values are necessary:
 
 See `fluid-typography.css` for the default values.
 
-> **NOTE:** The default Character Width is `2.27`. This value was chosen because it is the [average of 135+ fonts](https://grtcalculator.com/math/#section-width-factor). This value should work well in most cases, but tweaking it can sometimes provide better results. Changes to this value will affect the way `line-height` is calculated, in concert with `--cpl`.
+> **NOTE:** The default Character Width is `2.27`. This value was chosen because it is the [average character width of 135+ fonts](https://grtcalculator.com/math/#section-width-factor). This value should work well in most cases, but tweaking it can sometimes provide better results. Changes to this value will affect the way `line-height` is calculated, in concert with `--cpl`.
 
 ## Coming Soon
 
