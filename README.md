@@ -1,6 +1,6 @@
 # fluid-typography
 
-Get automatic fluid scaling of `font-size` AND `line-height` using CSS Container Queries!
+Automatic, fluid scaling of `font-size` AND `line-height` using CSS Container Queries!
 
 ## Usage
 
