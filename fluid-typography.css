@@ -1,21 +1,19 @@
 :root {
   --vp-width_min: 320;
   --vp-width_max: 2560;
-  
-  --default_font-size_min: 14;
-  --default_font-size_max: 24;
 
-  --font-size_min: var(--default_font-size_min);
-  --font-size_max: var(--default_font-size_max);
+  --font-size_min: 14;
+  --font-size_max: 28;
 
   --line-height_min: 1.382;
   --line-height_max: 1.618;
 
   --cpl: 62;
   --char-width: 2.27;
-  --width-factor: calc(100cqi / (var(--font-size_min) * (var(--cpl) / var(--char-width))));
-
   --scale-ratio: 1.618;
+
+  /* DO NOT CHANGE */
+  --width-factor;
 }
 
 html {
@@ -24,6 +22,8 @@ html {
 }
 
 [fluid] {
+  --width-factor: calc(100cqi / (var(--font-size_min) * (var(--cpl) / var(--char-width))));
+
   flex: 1;
   container-type: inline-size;
   container-name: fluid;
