@@ -8,8 +8,6 @@ Credit for the math belongs to [Chris Pearson](https://pearsonified.com/about/),
 
 Just include `fluid-typography.css` in the `<head>` of your html document, and add the `fluid` attribute to the DOM elements you would like to exhibit the fluid behavior. See `example.html` for an example implementation.
 
-## How it works
-
 For the algorithm to work in CSS, it is necessary to specify the following values:
 
 - min and max viewport width (`--vp-width_min` and `--vp-width_max`)
