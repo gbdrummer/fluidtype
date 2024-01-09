@@ -8,7 +8,7 @@ Just include `fluid-typography.css` in the `<head>` of your html document, and a
 
 ## How it works
 
-This CSS Library leverages [CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries) to dynamically alter `font-size` and `line-height` values in response to resizing of elements. There is no JavaScript involved, only liberal use of CSS Custom Properties as well as the `calc` function.
+This CSS Library leverages [CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries) to dynamically alter `font-size` and `line-height` values in response to resizing of elements. There is no JavaScript involved, only liberal use of CSS Container Queries, Custom Properties and the `calc` function.
 
 This library implements some of the math from the [Golden Ratio Typography Calculator](https://grtcalculator.com/) by [Chris Pearson](https://pearsonified.com/about/). You can find more details about how it works [here](https://grtcalculator.com/math/).
 
