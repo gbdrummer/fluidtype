@@ -1,16 +1,14 @@
 # fluid-typography
 
-Automatic, fluid scaling of `font-size` AND `line-height` using CSS Container Queries!
+This CSS Library leverages [CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries) to dynamically alter `font-size` and `line-height` values in response to resizing of elements. There is no JavaScript involved, only liberal use of CSS Container Queries, Custom Properties and the `calc` function.
+
+Credit for the math belongs to [Chris Pearson](https://pearsonified.com/about/), creator of the [Golden Ratio Typography Calculator](https://grtcalculator.com/).
 
 ## Usage
 
 Just include `fluid-typography.css` in the `<head>` of your html document, and add the `fluid` attribute to the DOM elements you would like to exhibit the fluid behavior.
 
 ## How it works
-
-This CSS Library leverages [CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries) to dynamically alter `font-size` and `line-height` values in response to resizing of elements. There is no JavaScript involved, only liberal use of CSS Container Queries, Custom Properties and the `calc` function.
-
-Credit for the math belongs to [Chris Pearson](https://pearsonified.com/about/), creator of the [Golden Ratio Typography Calculator](https://grtcalculator.com/).
 
 For the algorithm to work in CSS, it is necessary to specify the following values:
 
