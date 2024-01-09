@@ -8,7 +8,7 @@ Credit for the math belongs to [Chris Pearson](https://pearsonified.com/about/),
 
 Just include `fluid-typography.css` in the `<head>` of your html document, and add the `fluid` attribute to the DOM elements you would like to exhibit the fluid behavior. See `example.html` for an example implementation.
 
-For the algorithm to work in CSS, it is necessary to specify the following values:
+For the algorithm to work in CSS, the following values are necessary:
 
 - min and max viewport width (`--vp-width_min` and `--vp-width_max`)
 - min and max font-size (`--font-size_min` and `--font-size_max`)
@@ -16,14 +16,9 @@ For the algorithm to work in CSS, it is necessary to specify the following value
 - desired CPL (Characters Per Line) (`--cpl`)
 - Character Width (`---char-width`)
 
-The default Character Width value is `2.27`. This value was chosen because it is the [average of 135+ fonts](https://grtcalculator.com/math/#section-width-factor). This value should work well in most cases, but tweaking it can sometimes provide better results. Changes to this value will affect the way `line-height` is calculated in concert with `--cpl`.
+See `fluid-typography.css` for the default values.
 
-These values can be altered by changing the CSS Custom Properties in `fluid-typography.css`. However, the default values should work well for common scenarios.
-
-**To learn more about CSS Container Queries, see:**
-
-- [MDN Article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries)
-- [The Spec](https://www.w3.org/TR/css-contain-3/#container-queries)
+> **NOTE:** The default Character Width is `2.27`. This value was chosen because it is the [average of 135+ fonts](https://grtcalculator.com/math/#section-width-factor). This value should work well in most cases, but tweaking it can sometimes provide better results. Changes to this value will affect the way `line-height` is calculated, in concert with `--cpl`.
 
 ## Coming Soon
 
