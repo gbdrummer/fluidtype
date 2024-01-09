@@ -10,7 +10,7 @@ Just include `fluid-typography.css` in the `<head>` of your html document, and a
 
 This CSS Library leverages [CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries) to dynamically alter `font-size` and `line-height` values in response to resizing of elements. There is no JavaScript involved, only liberal use of CSS Container Queries, Custom Properties and the `calc` function.
 
-Most of the math comes from the [Golden Ratio Typography Calculator](https://grtcalculator.com/) by [Chris Pearson](https://pearsonified.com/about/). You can find more details about how it works [here](https://grtcalculator.com/math/).
+Credit for the math goes to [Chris Pearson](https://pearsonified.com/about/), creator of the [Golden Ratio Typography Calculator](https://grtcalculator.com/).
 
 For the algorithm to work in CSS, it is necessary to specify the following values:
 
