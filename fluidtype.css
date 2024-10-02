@@ -1,0 +1,70 @@
+/* fluidtype
+ * by Graham Butler (https://github.com/gbdrummer)
+ */
+
+/* TODO:
+   - Support em units
+   - Calculate font-size/line-height values based on scale ratio
+*/
+
+:root {
+  --vp_minWidth:           320;
+  --vp_maxWidth:           2560;
+
+  --fontSize_min:          14;
+  --fontSize_max:          28;
+
+  ---lineHeight_min:       1.382;
+  ---lineHeight_max:       1.618;
+
+  --cpl:                   62;
+  --char_width:            2.27;
+  --container_widthFactor: calc(100cqi / (var(--fontSize_min) * (var(--cpl) / var(--char_width))));
+  --type_scaleRatio:       1.618;
+}
+
+html {
+  font-size: calc(var(--fontSize_min) * 1px);
+  line-height: var(---lineHeight_min);
+}
+
+[fluidtype],
+[fluidfs],
+[fluidlh] {
+  container-type: inline-size;
+}
+
+[fluidtype] {
+  container-name: fluid;
+  font-size: max(calc(var(--fontSize_min) * 1px), calc((var(--fontSize_min) * 1px) + calc((var(--fontSize_max) - var(--fontSize_min)) * calc(100cqi - calc(var(--vp_minWidth) * 1px)) / calc(var(--vp_maxWidth) - var(--vp_minWidth)))));
+  line-height: max(calc(var(---lineHeight_min) * 1em), calc(var(--fontSize_min) * var(--container_widthFactor)));
+}
+
+[fluidfs] {
+  container-name: fluidfs;
+  font-size: max(calc(var(--fontSize_min) * 1px), calc((var(--fontSize_min) * 1px) + calc((var(--fontSize_max) - var(--fontSize_min)) * calc(100cqi - calc(var(--vp_minWidth) * 1px)) / calc(var(--vp_maxWidth) - var(--vp_minWidth)))));
+}
+
+[fluidlh] {
+  container-name: fluidlh;
+  line-height: max(calc(var(---lineHeight_min) * 1em), calc(var(--fontSize_min) * var(--container_widthFactor)));
+}
+
+@container fluid (min-width: 0px) {
+  * {
+    font-size: max(calc(var(--fontSize_min) * 1px), calc((var(--fontSize_min) * 1px) + calc((var(--fontSize_max) - var(--fontSize_min)) * calc(100cqi - calc(var(--vp_minWidth) * 1px)) / calc(var(--vp_maxWidth) - var(--vp_minWidth)))));
+    line-height: max(calc(var(---lineHeight_min) * 1em), calc(var(--fontSize_min) * var(--container_widthFactor)));
+  }
+}
+
+@container fluidfs (min-width: 0px) {
+  * {
+    font-size: max(calc(var(--fontSize_min) * 1px), calc((var(--fontSize_min) * 1px) + calc((var(--fontSize_max) - var(--fontSize_min)) * calc(100cqi - calc(var(--vp_minWidth) * 1px)) / calc(var(--vp_maxWidth) - var(--vp_minWidth)))));
+  }
+}
+
+@container fluidlh (min-width: 0px) {
+  * {
+    line-height: max(calc(var(---lineHeight_min) * 1em), calc(var(--fontSize_min) * var(--container_widthFactor)));
+  }
+}

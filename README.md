@@ -10,11 +10,11 @@ Just include `fluid-typography.css` in the `<head>` of your html document, and a
 
 For the algorithm to work in CSS, the following values are necessary:
 
-- min and max viewport width (`--vp-width_min` and `--vp-width_max`)
-- min and max font-size (`--font-size_min` and `--font-size_max`)
-- min and max line-height (`--line-height_min` and `--line-height_max`)
+- min and max viewport width (`--vp_minWidth` and `--vp_maxWidth`)
+- min and max font-size (`--fontSize_min` and `--fontSize_max`)
+- min and max line-height (`---lineHeight_min` and `---lineHeight_max`)
 - desired CPL (Characters Per Line) (`--cpl`)
-- Character Width (`---char-width`)
+- Character Width (`---char_width`)
 
 See `fluid-typography.css` for the default values.
 

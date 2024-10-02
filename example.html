@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fluid Typography Example</title>
 
-  <link rel="stylesheet" href="./fluid-typography.css">
+  <link rel="stylesheet" href="./fluidtype.css">
 
   <style>
     body {
@@ -16,21 +16,21 @@
     #demo {
       display: grid;
       grid-gap: 3.82vw;
-      grid-template-columns: repeat(auto-fit, minmax(calc((var(--vp-width_min) * 1px) - 7.64vw), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(calc((var(--vp_minWidth) * 1px) - 7.64vw), 1fr));
     }
 
     h1 {
-      font-size: calc(var(--scale-ratio) * 1em);
+      font-size: calc(var(--type_scaleRatio) * 1em);
     }
   </style>
 </head>
 <body>
-  <p fluid style="font-weight: bold; min-width: calc(var(--vp-width_min) * 1px);">
+  <p fluidtype style="font-weight: bold; min-width: calc(var(--vp_minWidth) * 1px);">
     Resize the window to see the typography adjust.
   </p>
 
   <div id="demo">
-    <section fluid>
+    <section fluidtype>
       <h1>Here is an H1</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
@@ -40,7 +40,7 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
     </section>
   
-    <section fluid>
+    <section fluidtype>
       <h1>Here is an H1</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet ea dolorem, minima cupiditate ut quo deleniti expedita tempora ducimus molestias nihil maxime sint optio aperiam sit adipisci sunt aliquid?</p>
