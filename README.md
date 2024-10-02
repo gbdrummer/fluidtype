@@ -23,3 +23,4 @@ See `fluidtype.css` for the default values.
 ## Coming Soon
 
 - Automatic calculation of `h1 - h6`, `font-size` and `line-height` values based on scale ratio.
+- Support for `em` units to allow manual scaling.
