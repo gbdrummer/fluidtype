@@ -21,9 +21,7 @@
   --char_width:            2.27;
   --container_widthFactor: calc(100cqi / (var(--fontSize_min) * (var(--cpl) / var(--char_width))));
   --type_scaleRatio:       1.618;
-}
 
-html {
   font-size: calc(var(--fontSize_min) * 1px);
   line-height: var(---lineHeight_min);
 }
