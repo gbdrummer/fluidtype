@@ -1,0 +1,55 @@
+:root {
+  --vp_minWidth: 320;
+  --vp_minWidth_px: calc(var(--vp_minWidth) * 1px);
+
+  --cpl: 62;
+  --charWidth: 2;
+  --scaleFactor: 1.618;
+
+  --fs: 1;
+
+  font-size: 16px;
+
+  /* Scaling Formula: fontSize(px) + ((100cqi - containerWidth(px)) * ((nextFontSize - fontSize) / (nextContainerWidth - containerWidth)) */
+
+  /* 1024px to 1200px: Scale from 16px to 17px */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    /* Slope = (17-16) / (1200-1024) = 1/176 ≈ 0.00568 */
+    font-size: calc(16px + ((100cqi - 1024px) * ((17 - 16) / (1200 - 1024))));
+  }
+
+  /* 1200px to 1600px: Scale from 17px to 18px */
+  @media (min-width: 1200px) and (max-width: 1599px) {
+    /* Slope = (18-17) / (1600-1200) = 1/400 = 0.0025 */
+    font-size: calc(17px + ((100cqi - 1200px) * (1 / 400)));
+  }
+
+  /* 1600px to 1920px: Scale from 18px to 19px */
+  @media (min-width: 1600px) and (max-width: 1919px) {
+    /* Slope = (19-18) / (1920-1600) = 1/320 ≈ 0.003125 */
+    font-size: calc(18px + ((100cqi - 1600px) * (1 / 320)));
+  }
+
+  /* 1920px to 2560px: Scale from 19px to 20px */
+  @media (min-width: 1920px) and (max-width: 2559px) {
+    /* Slope = (20-19) / (2560-1920) = 1/640 ≈ 0.0015625 */
+    font-size: calc(19px + ((100cqi - 1920px) * (1 / 640)));
+  }
+
+  /* 2560px to 7680px: Scale from 20px to 28px */
+  @media (min-width: 2560px) and (max-width: 7679px) {
+    /* Slope = (28-20) / (7680-2560) = 8/5120 = 0.0015625 */
+    font-size: calc(20px + ((100cqi - 2560px) * 0.0015625));
+  }
+
+  /* For viewports 7680px and above, cap the font-size at 28px */
+  @media (min-width: 7680px) {
+    font-size: 28px;
+  }
+}
+
+/* [fluidtype] { */
+  /* container-name: fluid; */
+  /* font-size: clamp(16px, calc(16px + ((100cqi - 1024px) * 0.001803)), 28px); */
+  /* font-size: max(calc(var(--fontSize_min) * 1px), calc((var(--fontSize_min) * 1px) + calc((var(--fontSize_max) - var(--fontSize_min)) * calc(100cqi - calc(var(--vp_minWidth) * 1px)) / calc(var(--vp_maxWidth) - var(--vp_minWidth))))); */
+/* } */
